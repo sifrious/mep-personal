@@ -10,4 +10,4 @@ RUN npm run build
 FROM nginx:1.17.1-alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/personal-website /usr/share/nginx/html
-EXPOSE 8080:80
+EXPOSE 80
