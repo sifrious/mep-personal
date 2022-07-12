@@ -1,0 +1,22 @@
+<div id="doing-container" class="ing-container">
+    <div id="doing-title">
+        doing
+    </div>
+    <div id="doing-list">
+        <div *ngFor="let doing of doing_items" class="doing-item">
+            <span *ngIf="doing.grammar[0]">{{doing.grammar[0]}}</span>
+            <span *ngIf="doing.verb" class="doing-verb">{{doing.verb}}</span>
+            <span *ngIf="doing.grammar[1]">{{doing.grammar[1]}}</span>
+            <span *ngIf="doing.link_text==''; else urltext">
+                <span *ngIf="doing.link_url" class="doing-name doing-name-link">
+                    <a href="{{doing.link_url}}">{{doing.name}}</a>
+                </span>
+                <span *ngIf="doing.link_url==''" class="doing-name doing-name-plain">
+                    {{doing.name}}
+                </span>
+            </span>
+            <span *ngIf="doing.grammar[2]">{{doing.grammar[2]}}</span>
+            <ng-template #urltext>Boop</ng-template>
+        </div>
+    </div>
+</div>

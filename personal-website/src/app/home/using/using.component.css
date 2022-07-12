@@ -1,0 +1,33 @@
+#using-container {
+    padding: 3px;
+}
+
+#using-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.2em;
+    line-height: .78em;
+}
+
+#using-container {
+    width: 100%;
+}
+
+#using-body {
+    font-family: 'Open Sans', sans-serif;
+    width: 95%;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tskill {
+    background-color: white;
+    width: auto;
+    margin: 2px;
+    padding: 2.3px 5px;
+}
+
+.tskill:hover {
+    background-color: lightgoldenrodyellow;
+}

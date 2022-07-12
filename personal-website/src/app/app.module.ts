@@ -1,40 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//module imports
+import { HeaderModule } from './header/header.module';
+import { ResumeModule } from './resume/resume.module';
+import { HomeModule } from './home/home.module';
+//form imports
+import { ResumeComponent } from './resume/resume.component';
+import { HomeComponent } from './home/home.component'
+import { HeaderComponent } from './header/header.component';
+import { NavigationRoutesComponent } from './navigation-routes/navigation-routes.component';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { ResumeComponent } from './resume/resume.component';
-import { WritingComponent } from './writing/writing.component';
-import { VisualComponent } from './visual/visual.component';
-import { AboutComponent } from './about/about.component';
-import { IconsComponent } from './home/icons/icons.component';
-import { ProjecthighlightsComponent } from './home/projecthighlights/projecthighlights.component';
-import { HomemainComponent } from './home/homemain/homemain.component';
-import { MakingComponent } from './home/homemain/making/making.component';
-import { UsingComponent } from './home/homemain/using/using.component';
-import { DiggingComponent } from './home/homemain/digging/digging.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
+    AppComponent, 
     ResumeComponent,
-    WritingComponent,
-    VisualComponent,
-    AboutComponent,
-    IconsComponent,
-    ProjecthighlightsComponent,
-    HomemainComponent,
-    MakingComponent,
-    UsingComponent,
-    DiggingComponent
+    HomeComponent,
+    HeaderComponent,
+    NavigationRoutesComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    HeaderModule,
+    ResumeModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

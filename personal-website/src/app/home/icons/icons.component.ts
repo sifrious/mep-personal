@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { contact_links } from '../contact_icons'
 
 @Component({
-  selector: 'app-icons',
+  selector: 'home-icons',
   templateUrl: './icons.component.html',
-  styleUrls: ['./icons.component.css']
+  styleUrls: ['./icons.component.css'],
 })
-export class IconsComponent implements OnInit {
 
-  constructor() { }
-
+export class IconComponent implements OnInit {
+  contact_links = contact_links;
+    
   ngOnInit(): void {
-  }
-
+  };
 }
