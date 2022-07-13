@@ -5,7 +5,8 @@ import { TechItem } from '../../technologies'
 @Component({
   selector: 'app-using',
   templateUrl: './using.component.html',
-  styleUrls: ['./using.component.css']
+  styleUrls: ['./using.component.css'],
+  providers: [TechSkillService]
 })
 
 export class UsingComponent implements OnInit {

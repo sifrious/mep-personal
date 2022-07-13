@@ -8,6 +8,7 @@
     padding-right: 2%;
     width: 96%;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #home-center-container {
@@ -17,6 +18,8 @@
 #home-icon-container {
     position: absolute;
     bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 /*
@@ -30,12 +33,13 @@
     #home-main-container {
         height: 100%;
         width: 98%;
-        padding: 2% 0 0 2%;
+        padding: 2% 4% 0 2%;
+        margin-left: 2%;
     }
 
     #home-container {
         flex-direction: column-reverse;
-        width: 95%;
+        width: 98%;
         position: fixed;
         top: 6em;
         bottom: 6em;

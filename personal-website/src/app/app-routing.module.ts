@@ -9,6 +9,7 @@ import { WritingComponent } from './writing/writing.component';
 import { VisualComponent } from './visual/visual.component';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent, pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'visual', component:VisualComponent, pathMatch: 'full'},
   {path: 'about', component:AboutComponent, pathMatch: 'full'},
   {path: 'contact', component:ContactComponent, pathMatch: 'full'},
+  {path: 'projects', component:ProjectsComponent, pathMatch: 'full'},
   {path: '**', component:PageNotFoundComponent, pathMatch: 'full'}
 ];
 

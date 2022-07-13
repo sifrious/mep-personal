@@ -7,12 +7,12 @@ import { ExperienceComponent } from './experience/experience.component'
 import { HobbiesComponent } from './hobbies/hobbies.component'
 import { ProjectsComponent } from './projects/projects.component'
 import { SkillsComponent } from './skills/skills.component'
-import { TechComponent} from './technologies/technologies.component'
+import { TechComponent } from './technologies/technologies.component'
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [ContactComponent, EducationComponent, ExperienceComponent, HobbiesComponent,ProjectsComponent, SkillsComponent, TechComponent],
-    exports: [ContactComponent, EducationComponent, ExperienceComponent, HobbiesComponent, ProjectsComponent, SkillsComponent, TechComponent]
+    declarations: [ContactComponent, EducationComponent, ExperienceComponent, HobbiesComponent,ProjectsComponent, TechComponent, SkillsComponent],
+    exports: [ContactComponent, EducationComponent, ExperienceComponent, HobbiesComponent, ProjectsComponent, TechComponent, SkillsComponent]
 })
 
 export class ResumeModule { }

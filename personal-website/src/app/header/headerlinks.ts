@@ -15,6 +15,7 @@ export const nav_links = [
         text: 'Resume',
         routerlink: '/resume'
     },
+    /*
     {
         id: 'writing-link',
         text: 'Writing',
@@ -25,6 +26,7 @@ export const nav_links = [
         text: 'Visual',
         routerlink: '/visual'
     },
+    */
     {
         id: 'about-link',
         text: 'About',

@@ -51,8 +51,8 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
-        width: 88%;
-        margin: 0px auto 0px 4px;
+        width: 80%;
+        margin: 0px auto 0px auto;
     }
     #contact-spacer {
         display: none;

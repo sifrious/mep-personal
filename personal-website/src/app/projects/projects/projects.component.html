@@ -1,0 +1,31 @@
+<div id="project-list">
+    <div *ngFor="let project of projects" class="project-item">
+        <span class="project-type">
+            <small>{{project.type}}</small>
+        </span>
+        <div class="project-name">
+            {{project.name}} 
+        </div>
+        <div class="context">
+            <span *ngIf="project.course" class="project-course">
+                coursework for 
+                <span class="course-name">{{project.course}} </span>
+            </span>
+            <span *ngIf="project.assc" class="project-assc">
+                <i>at </i>
+                <span class="assc-name">{{project.assc}}</span>
+            </span>
+        </div>
+        <div class="gerund">
+            {{project.gerund}}
+        </div>
+        <div *ngIf="project.src.length > 0" class="project-srcs">
+            <div *ngFor="let src of project.src" class="project-src">
+                view 
+                    <a href={{src.url}} class="src-url">
+                        {{src.description}}
+                    </a>
+            </div>
+        </div>
+    </div>
+</div>
