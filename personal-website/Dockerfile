@@ -1,13 +1,31 @@
-### STAGE 1: Build ###
-FROM node:alpine AS build
-WORKDIR /usr/src/app
-COPY package.json package-lock.json ./
-RUN npm install
-COPY . .
-RUN npm run build
+# syntax=docker/dockerfile:1.4
 
-### STAGE 2: Run ###
-FROM nginx:1.17.1-alpine
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /usr/src/app/dist/personal-website /usr/share/nginx/html
-EXPOSE 80
+FROM --platform=$BUILDPLATFORM node:17.0.1-bullseye-slim as builder
+
+RUN mkdir /project
+WORKDIR /project
+
+RUN npm install -g @angular/cli@13
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY . .
+CMD ["ng", "serve", "--host", "0.0.0.0"]
+
+FROM builder as dev-envs
+
+RUN <<EOF
+apt-get update
+apt-get install -y --no-install-recommends git
+EOF
+
+RUN <<EOF
+useradd -s /bin/bash -m vscode
+groupadd docker
+usermod -aG docker vscode
+EOF
+# install Docker tools (cli, buildx, compose)
+COPY --from=gloursdocker/docker / /
+
+CMD ["ng", "serve", "--host", "0.0.0.0"]
