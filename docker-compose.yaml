@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: personal-website
+      target: builder
+    ports:
+      - 4200:4200
+    volumes:
+      - ./personal-website:/project
+      - /project/node_modules
