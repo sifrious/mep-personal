@@ -5,7 +5,8 @@ FROM alpine:latest AS builder
 RUN mkdir /project
 WORKDIR /project
 
-RUN apk update && APK add
+RUN apk update
+RUN apk add
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y build-essential
