@@ -16,12 +16,3 @@ RUN npm ci
 
 COPY . .
 CMD ["ng", "serve", "--host", "0.0.0.0"]
-
-FROM builder as dev-envs
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends git
-
-# install Docker tools (cli, buildx, compose)
-# COPY --from=gloursdocker/docker / /
-
-CMD ["ng", "serve", "--host", "0.0.0.0"]
