@@ -1,10 +1,11 @@
 # syntax=docker/dockerfile:1.4
 
-FROM alpine:3.14 AS builder
+FROM alpine:latest AS builder
 
 RUN mkdir /project
 WORKDIR /project
 
+RUN apk update && APK add
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y build-essential
