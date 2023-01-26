@@ -6,10 +6,9 @@ RUN mkdir /project
 WORKDIR /project
 
 RUN apk update
-RUN apk add
-RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-RUN apt-get install -y nodejs
-RUN apt-get install -y build-essential
+RUN apk add --update nodejs npm
+RUN apk add --update build-base
+
 RUN npm install -g @angular/cli@13
 
 COPY package.json package-lock.json ./
