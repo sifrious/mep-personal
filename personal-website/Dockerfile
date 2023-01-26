@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 
-FROM --platform=$BUILDPLATFORM node:17.0.1-bullseye-slim as builder
+FROM alpine:3.14 AS builder
 
 RUN mkdir /project
 WORKDIR /project
