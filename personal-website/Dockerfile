@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 
-FROM --platform=linux/arm64 alpine as builder
+FROM --platform=linux/amd64 alpine as builder
 
 RUN mkdir /project
 WORKDIR /project
