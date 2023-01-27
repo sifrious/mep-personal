@@ -6,7 +6,7 @@ services:
       context: personal-website
       target: builder
     ports:
-      - 4200:4200
-    volumes:
-      - ./personal-website:/project
-      - /project/node_modules
+      - 8080:80
+    # volumes:
+    #   - ./personal-website:/project
+    #   - /project/node_modules
